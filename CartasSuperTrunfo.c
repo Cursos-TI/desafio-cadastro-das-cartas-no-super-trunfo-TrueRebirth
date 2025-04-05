@@ -2,17 +2,7 @@
 #include <string.h>
 
 int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-    
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
-
+// declaração de variaveis:
     char lixo[2];
     char estado1[3], estado2[3];
     char codigo1[5], codigo2[5];
@@ -21,10 +11,11 @@ int main() {
     float area1, area2;
     float pib1, pib2;
     int pontosturisticos1, pontosturisticos2;
+//Leitura das cartas:
     printf("Coloque os dados da PRIMEIRA carta:\n");
     printf("Digite o Estado\n");
     fgets(estado1, sizeof(estado1), stdin);
-    estado1[strcspn(estado1, "\n")] = 0;
+    estado1[strcspn(estado1, "\n")] = 0; //retirar caractere \n residual após inserir o dado para não interferir no proximo fgets
     printf("Digite o Codigo da carta\n");
     fgets(codigo1, sizeof(codigo1), stdin);
     codigo1[strcspn(codigo1, "\n")] = 0;
@@ -39,7 +30,7 @@ int main() {
     scanf("%f", &pib1);
     printf("Digite o numero de pontos turisticos\n");
     scanf(" %d", &pontosturisticos1);
-    fgets(lixo,2,stdin);
+    fgets(lixo,2,stdin); //fgets dummy para retirar newlines residual.
 
     printf("Agora coloque os dados da SEGUNDA carta:\n");
     printf("Digite o Estado\n");
@@ -59,7 +50,7 @@ int main() {
     scanf("%f", &pib2);
     printf("Digite o numero de pontos turisticos\n");
     scanf("%d", &pontosturisticos2);
-
+//exibição das cartas:
     printf("Carta 1:\nEstado: %s\nCodigo: %s\nCidade: %s\nPopulação: %d\nÁrea: %f\nPIB: %f\nPontos turísticos: %d\n", estado1, codigo1, cidade1, populacao1, area1, pib1, pontosturisticos1);
     
     printf("Carta 2:\nEstado: %s\nCodigo: %s\nCidade: %s\nPopulação: %d\nÁrea: %f\nPIB: %f\nPontos turísticos: %d\n", estado2, codigo2, cidade2, populacao2, area2, pib2, pontosturisticos2);
