@@ -31,7 +31,8 @@ int main() {
     printf("Digite o numero de pontos turisticos\n");
     scanf(" %d", &pontosturisticos1);
     fgets(lixo,2,stdin); //fgets dummy para retirar newlines residual.
-
+    float denspop1 = (float) populacao1/area1;
+    float pibpercap1 = (float) pib1/populacao1;
     printf("Agora coloque os dados da SEGUNDA carta:\n");
     printf("Digite o Estado\n");
     fgets(estado2, sizeof(estado2), stdin);
@@ -51,9 +52,9 @@ int main() {
     printf("Digite o numero de pontos turisticos\n");
     scanf("%d", &pontosturisticos2);
 //exibição das cartas:
-    printf("Carta 1:\nEstado: %s\nCodigo: %s\nCidade: %s\nPopulação: %d\nÁrea: %f\nPIB: %f\nPontos turísticos: %d\n", estado1, codigo1, cidade1, populacao1, area1, pib1, pontosturisticos1);
+    printf("Carta 1:\nEstado: %s\nCodigo: %s\nCidade: %s\nPopulação: %d\nÁrea: %f\nPIB: %f\nPontos turísticos: %d\nDensidade Populacional: %f\nPIB per capita: %f\n", estado1, codigo1, cidade1, populacao1, area1, pib1, pontosturisticos1, denspop1, pibpercap1);
     
-    printf("Carta 2:\nEstado: %s\nCodigo: %s\nCidade: %s\nPopulação: %d\nÁrea: %f\nPIB: %f\nPontos turísticos: %d\n", estado2, codigo2, cidade2, populacao2, area2, pib2, pontosturisticos2);
+    printf("Carta 2:\nEstado: %s\nCodigo: %s\nCidade: %s\nPopulação: %d\nÁrea: %f\nPIB: %f\nPontos turísticos: %d\n", estado2, codigo2, cidade2, populacao2, area2, pib2, pontosturisticos2, denspop1, pibpercap1);
     return 0;
 
 
