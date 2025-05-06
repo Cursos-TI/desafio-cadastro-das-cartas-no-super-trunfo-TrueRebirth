@@ -33,6 +33,7 @@ int main() {
     fgets(lixo,2,stdin); //fgets dummy para retirar newlines residual.
     float denspop1 = (float) populacao1/area1;
     float pibpercap1 = (float) pib1/populacao1;
+    float superpoder1 = (float) populacao1+area1+pib1+pontosturisticos1+pibpercap1-denspop1;
     printf("Agora coloque os dados da SEGUNDA carta:\n");
     printf("Digite o Estado\n");
     fgets(estado2, sizeof(estado2), stdin);
@@ -51,10 +52,15 @@ int main() {
     scanf("%f", &pib2);
     printf("Digite o numero de pontos turisticos\n");
     scanf("%d", &pontosturisticos2);
+    float denspop2 = (float) populacao2/area2;
+    float pibpercap2 = (float) pib2/populacao2;
+    float superpoder2 = (float) populacao2+area2+pib2+pontosturisticos2+pibpercap2-denspop2;
 //exibição das cartas:
-    printf("Carta 1:\nEstado: %s\nCodigo: %s\nCidade: %s\nPopulação: %d\nÁrea: %f\nPIB: %f\nPontos turísticos: %d\nDensidade Populacional: %f\nPIB per capita: %f\n", estado1, codigo1, cidade1, populacao1, area1, pib1, pontosturisticos1, denspop1, pibpercap1);
+    printf("Carta 1:\nEstado: %s\nCodigo: %s\nCidade: %s\nPopulação: %d\nÁrea: %f\nPIB: %f\nPontos turísticos: %d\nDensidade Populacional: %f\nPIB per capita: %f\nSuperpoder: %f\n", estado1, codigo1, cidade1, populacao1, area1, pib1, pontosturisticos1, denspop1, pibpercap1, superpoder1);
     
-    printf("Carta 2:\nEstado: %s\nCodigo: %s\nCidade: %s\nPopulação: %d\nÁrea: %f\nPIB: %f\nPontos turísticos: %d\n", estado2, codigo2, cidade2, populacao2, area2, pib2, pontosturisticos2, denspop1, pibpercap1);
+    printf("Carta 2:\nEstado: %s\nCodigo: %s\nCidade: %s\nPopulação: %d\nÁrea: %f\nPIB: %f\nPontos turísticos: %d\nDensidade Populacional: %f\nPIB per capita: %f\nSuperpoder: %f\n", estado2, codigo2, cidade2, populacao2, area2, pib2, pontosturisticos2, denspop2, pibpercap2, superpoder2);
+
+    printf("Comparação(1 = Carta 1 venceu, 0 = Carta 2 venceu):\nPopulação: %d\nArea: %d\nPIB: %d\nPontos Turisticos: %d\nDensidade Populacional: %d\nPIB per capita: %d\nSuperpoder: %d\n",populacao1>populacao2,area1>area2,pib1>pib2,pontosturisticos1>pontosturisticos2,denspop1<denspop2,pibpercap1>pibpercap2,superpoder1>superpoder2);
     return 0;
 
 
