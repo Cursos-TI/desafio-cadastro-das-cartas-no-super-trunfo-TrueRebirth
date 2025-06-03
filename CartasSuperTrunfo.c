@@ -60,7 +60,14 @@ int main() {
     
     printf("Carta 2:\nEstado: %s\nCodigo: %s\nCidade: %s\nPopulação: %d\nÁrea: %f\nPIB: %f\nPontos turísticos: %d\nDensidade Populacional: %f\nPIB per capita: %f\nSuperpoder: %f\n", estado2, codigo2, cidade2, populacao2, area2, pib2, pontosturisticos2, denspop2, pibpercap2, superpoder2);
 
-    printf("Comparação(1 = Carta 1 venceu, 0 = Carta 2 venceu):\nPopulação: %d\nArea: %d\nPIB: %d\nPontos Turisticos: %d\nDensidade Populacional: %d\nPIB per capita: %d\nSuperpoder: %d\n",populacao1>populacao2,area1>area2,pib1>pib2,pontosturisticos1>pontosturisticos2,denspop1<denspop2,pibpercap1>pibpercap2,superpoder1>superpoder2);
+    printf("Comparação (População):\nCarta 1:%d\nCarta 2:%d\n", populacao1, populacao2); //comparação
+     if(populacao1==populacao2){
+        printf("empate!");}
+        else if(populacao1>populacao2){
+            printf("Carta 1 Venceu!");
+        }
+        else printf("Carta 2 Venceu!");
+
     return 0;
 
 
